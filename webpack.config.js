@@ -13,8 +13,15 @@ module.exports = {
         filename: 'bundled.js',
         path: path.resolve(__dirname, 'app')
     },
+    devServer: {
+        before: function(app, server) {
+            server._watch('./**/*.html')
+        },
+        contentBase: path.join(__dirname, 'app'),
+        hot: true, // support hot-reload i.e. no need to refresh browser manually
+        host: '0.0.0.0'
+    },
     mode: 'development',
-    // watch: true,
     module: {
         rules: [
             {
