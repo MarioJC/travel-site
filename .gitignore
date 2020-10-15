@@ -27,3 +27,8 @@ nbproject
 .komodotools
 _notes
 dwsync.xml
+
+# project specific
+
+# no need to track auto-generated files
+bundled.js
